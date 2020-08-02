@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import ConnectToWifi
+from .models import Wifi
 
 
 def home(request):
@@ -8,17 +8,24 @@ def home(request):
         print('Lol')
         connect = request.POST['select']
         password = request.POST['password']
-        print(ConnectToWifi)
-        data = ConnectToWifi(con=connect, p=password)
-        data.save()
+        print(Wifi)
+        # data = Wifi(con=connect, p=password)
+        # data.save()
 
-        print("DATA=", request.POST)
-        print(data)
-        context = {
-            "user": "{}, ".format(connect)
-        }
-        print(context)
-        return render(request, 'form_res.html', context)
+        # print("DATA=", request.POST)
+        # print(data)
+        if(Wifi.objects.filter(con=connect).exists() and 
+            Wifi.objects.filter(p=password).exists()): 
+            context = {
+                "user": "{}, ".format(connect)
+            }
+            print(context)
+            return render(request, 'form_res.html', context)
+        else:
+            context = {
+                "message": "Id or password Incorrect"
+            }
+            return render(request, 'index.html', context)
     else:
         return render(request, 'index.html')
 
