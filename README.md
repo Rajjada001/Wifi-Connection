@@ -46,3 +46,5 @@
 - You can check your stored values in http://127.0.0.1:8000/admin/tasks/connecttowifi/
 
 ![Screenshot (162)](https://user-images.githubusercontent.com/56466485/89096212-811e1480-d3f2-11ea-9d04-e5b2bc7cee17.png)
+
+![Screenshot (163)](https://user-images.githubusercontent.com/56466485/89116532-ba1dbe00-d4b2-11ea-9212-82f7277add67.png)
