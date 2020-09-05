@@ -35,12 +35,7 @@
 - Run `python manage.py createsuperuser`
 
   > Now you need to provide credentials for the superuser.
-  >
-  > type _Django_ as the username
-  >
-  > email: django@connect.in
-  >
-  > password : connect
+ 
 
 - Now run `python manage.py runserver` then fill the form, you will see the result.
 - You can check your stored values in http://127.0.0.1:8000/admin/tasks/connecttowifi/
